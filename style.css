@@ -1,0 +1,173 @@
+:root {
+  --girlie-pink: hsl(352, 100%, 84%);
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* Give the whole site a "vibe" */
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  background: var(--girlie-pink);
+  padding: 5rem 2rem;
+  border-bottom: 5px solid var(--black);
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  margin: 0;
+  /* Stroke effect for that 'Digital Girlie' look */
+  -webkit-text-stroke: 2px var(--black);
+  color: var(--white);
+  text-shadow: 6px 6px 0px var(--black);
+}
+
+.nav-link {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 3px solid var(--black);
+  background: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--black);
+  box-shadow: 4px 4px 0px var(--black);
+}
+
+.nav-link:hover {
+  background: var(--girlie-pink);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--black);
+}
+
+/* Navigation Container */
+.navbar {
+    background: var(--white);
+    border-bottom: 5px solid var(--black);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--black);
+    border: 3px solid var(--black);
+    padding: 5px 10px;
+    background: var(--girlie-pink);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Mobile Toggle Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: var(--girlie-pink);
+    border: 3px solid var(--black);
+    padding: 5px;
+    box-shadow: 3px 3px 0px var(--black);
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--black);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 75px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        border-bottom: 5px solid var(--black);
+        padding-bottom: 2rem;
+        gap: 0;
+    }
+
+    .nav-menu.active { left: 0; }
+
+    .nav-link {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+.btn-primary-nav {
+    background: var(--girlie-pink);
+    padding: 10px 20px;
+    border: 3px solid var(--black);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black);
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+/* Neobrutalist Card Base */
+.neo-card {
+    border: 5px solid var(--black);
+    padding: 2.5rem;
+    box-shadow: 10px 10px 0px var(--black);
+    background: var(--white);
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: inline-block;
+    background: var(--girlie-pink);
+    padding: 5px 15px;
+    border: 4px solid var(--black);
+    box-shadow: 6px 6px 0px var(--black);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Ensure images and cards don't break layout */
+* { box-sizing: border-box; }
